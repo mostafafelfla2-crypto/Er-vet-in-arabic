@@ -12,7 +12,7 @@ export async function POST(request) {
     }
 
     // تحديد مسار ملف الإكسيل داخل مجلد data
-    const filePath = path.join(process.cwd(), 'data', 'results.xlsx');
+    const filePath = path.join(process.cwd(), 'results.xlsx');
 
     // التأكد من أن الملف موجود
     if (!fs.existsSync(filePath)) {
