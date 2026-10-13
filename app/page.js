@@ -104,14 +104,15 @@ export default function Home() {
           return (
             <div style={{ marginTop: '30px', padding: '20px', backgroundColor: '#ffffff', border: '1px solid #edf2f7', borderRadius: '12px', boxShadow: '0 4px 6px rgba(0,0,0,0.02)' }}>
               
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '20px', paddingBottom: '15px', borderBottom: '1px solid #edf2f7' }}>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '15px' }}>
+              {/* التعديل تم هنا: جعل العناصر بشكل عمودي مع كسر الكلمات الطويلة */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '20px', paddingBottom: '15px', borderBottom: '1px solid #edf2f7' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', fontSize: '15px' }}>
                   <span style={{ color: '#718096' }}>اسم الطالب:</span>
-                  <strong style={{ color: '#2d3748' }}>{result.name}</strong>
+                  <strong style={{ color: '#2d3748', wordWrap: 'break-word', wordBreak: 'break-word' }}>{result.name}</strong>
                 </div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '15px' }}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '4px', fontSize: '15px' }}>
                   <span style={{ color: '#718096' }}>الإيميل:</span>
-                  <strong style={{ color: '#2d3748', direction: 'ltr' }}>{result.email}</strong>
+                  <strong style={{ color: '#2d3748', wordBreak: 'break-all' }}>{result.email}</strong>
                 </div>
               </div>
 
